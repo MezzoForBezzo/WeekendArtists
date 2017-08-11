@@ -9,6 +9,7 @@ var databaseVersion = "v3";
 
 
 function getExampleImage(){
+  // DO STUFF
   var id = "5983a0ca1257573778000722";
   var digitalNZUrl = "http://api.digitalnz.org/" +databaseVersion +"/records/" +id +"?api_key=" +digitalNZKey;
   var request = request({url: digitalNZUrl, json: true});
