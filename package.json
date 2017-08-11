@@ -1,0 +1,22 @@
+{
+  "name": "weekendartists",
+  "version": "1.0.0",
+  "description": "Summer Of Tech Hackfest 2017 Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwhmeikle/WeekendArtists.git"
+  },
+  "author": "Nanda, Matt, Michael, James, Hamish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hwhmeikle/WeekendArtists/issues"
+  },
+  "homepage": "https://github.com/hwhmeikle/WeekendArtists#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
