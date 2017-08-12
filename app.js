@@ -78,8 +78,15 @@ app.get('/test', function (req, res) {
 app.get('/description', function (req, res) {
     console.log(req.query.id);
     var id = req.query.id;
-    var variables = {id}
-    res.render("description.html.ejs", variables);
+    var digitalNZUrl = "http://api.digitalnz.org/v3/records/" + id + "?api_key=" + digitalNZKey;
+    return request({url: digitalNZUrl, json: true}).then(data => {
+        var imageUrl = data.record.large_thumbnail_url;
+        var title = data.record.title;
+        var desc = data.record.description;
+        console.log(imageUrl);
+        results = [imageUrl, title, desc];
+        res.render("description.html.ejs", results);
+    });
 });
 
 app.listen(3000, function () {
