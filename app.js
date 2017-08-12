@@ -73,7 +73,12 @@ app.get('/', function (req, res) {
 });
 
 app.get('/test', function(req,res){
-  testColorPicker();
+    testColorPicker();
+});
+
+app.get('/view', function(req,res){
+    console.log(req.query.id);
+    var id = req.query.id;
 });
 
 app.listen(3000, function () {
