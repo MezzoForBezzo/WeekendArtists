@@ -10,6 +10,7 @@ var digitalNZKey = "dHe4fP3p2HMw4jm92snZ";
 var databaseVersion = "v3";
 
 function testColorPicker(){
+  // Formatted colours: Returned in array as {IMG, IMG, IMG, BG, BG, BG, FG, FG, FG
   var request = require('request'),
       apiKey = 'acc_f8948e118b862e4',
       apiSecret = '768f05ab9814e9bc93a28a4cd2cbb179',
@@ -19,12 +20,16 @@ function testColorPicker(){
       // console.log('Status:', response.statusCode);
       // console.log('Headers:', JSON.stringify(response.headers));
       // console.log('Response:', body);
-      var colors = response.body;
-      jsonQuery('html_code', {
-          colors:colors
-      })
+      var result = JSON.parse(body);
+      var colors = []
+      result.results[0]["info"].image_colors.forEach((img) => colors.push(img.html_code));
+      result.results[0]["info"].background_colors.forEach((bgImg) => colors.push(bgImg.html_code));
+      result.results[0]["info"].foreground_colors.forEach((fgImg) => colors.push(fgImg.html_code));
       console.log(colors);
+      console.log(body);
   }).auth(apiKey, apiSecret, true);
+
+  return colors;
 };
 
 
