@@ -1,19 +1,80 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-
+	<title>Weekend Artists</title> <!-- Will change this name-->
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
-  <h2> Henlo </h2>
+	<header>
+		<div class="desktop-header">
+			<div class="desktop-header-inner">
+				<div class="desktop-header-logo">
+					<a href="index.html">
+						Weekend Artists
+					</a>
+				</div>
+				<ul class="desktop-header-nav">
+				</ul>
+				<ul class="desktop-header-nav-right">
+					<li>
+						<a href="create_event.html">Explore</a>
+					</li>
+          <li>
+						<a href="create_event.html">Search</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- The Drop down menu, that will appear on smaller screens: -->
+		<div class = "mobile-menu">
+			<div class = "mobile-menu-inner">
+				<div class = "mobile-menu-hamburger">
+					<button id = "dropClick">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<div class="mobile-menu-logo">
+					<a href="index.html">
+					W
+					</a>
+				</div>
+			</div>
+			<div class>
+				<ul id = "menuItems" class = "mobile-menu-content">
+					<li>
+						<a href="about.html">Explore</a>
+					</li>
+					<li>
+						<a href="news.html">Search</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="grid">
+  <div class="grid-sizer"></div>
+
+  <% for (img in image) { %>
+  	 <div class="grid-item">
+       <img src="<%= image[img]%>">
+     </div>
+  <% }%>
+
+</div>
+
+
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<!-- <script src="js/imagesloaded.pkgd.min.js"> -->
+<script src="js/index.js"></script>
+
 </body>
+
 </html>
