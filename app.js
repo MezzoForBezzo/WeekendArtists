@@ -9,27 +9,27 @@ app.set("view engine", "ejs")
 var digitalNZKey = "dHe4fP3p2HMw4jm92snZ";
 var databaseVersion = "v3";
 
-function testColorPicker() {
+function testColorPicker(url, cb) {
     // Formatted colours: Returned in array as {IMG, IMG, IMG, BG, BG, BG, FG, FG, FG
     var request = require('request'),
         apiKey = 'acc_f8948e118b862e4',
         apiSecret = '768f05ab9814e9bc93a28a4cd2cbb179',
-        imageUrl = 'https://imagga.com/static/images/tagging/wind-farm-538576_640.jpg';
+        imageUrl = url;
 
+    var colors = [];
     request.get('https://api.imagga.com/v1/colors?url=' + encodeURIComponent(imageUrl), function (error, response, body) {
         // console.log('Status:', response.statusCode);
         // console.log('Headers:', JSON.stringify(response.headers));
         // console.log('Response:', body);
+        console.log(`COlours array${colors}`);
         var result = JSON.parse(body);
-        var colors = []
         result.results[0]["info"].image_colors.forEach((img) => colors.push(img.html_code));
         result.results[0]["info"].background_colors.forEach((bgImg) => colors.push(bgImg.html_code));
         result.results[0]["info"].foreground_colors.forEach((fgImg) => colors.push(fgImg.html_code));
         console.log(colors);
         console.log(body);
+        cb(colors);
     }).auth(apiKey, apiSecret, true);
-
-    return colors;
 };
 
 
@@ -83,11 +83,16 @@ app.get('/description', function (req, res) {
         var imageUrl = data.record.large_thumbnail_url;
         var title = data.record.title;
         var desc = data.record.description;
-        console.log(imageUrl);
-        results = [imageUrl, title, desc];
-        res.render("description.html.ejs", results);
+        testColorPicker(imageUrl, function (colors) {
+            console.log(colors);
+            results = [imageUrl, title, desc, colors];
+            console.log(results);
+            res.render("description.html.ejs", results);
+        });
     });
 });
+
+
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
