@@ -58,7 +58,7 @@
 	</header>
 	<div id="mosaic">
   <% for (img in image) { %>
-       <img src="<%= image[img]%>">
+		<a href="description?id=<%=image[img].id%>"><img src="<%= image[img].large_thumbnail_url%>"></a>
   <% }%>
 	</div>
 
