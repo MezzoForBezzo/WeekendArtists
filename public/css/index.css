@@ -309,7 +309,7 @@ button {
  column-gap:           0px;
 }
 
-#mosaic img {
+div#mosaic img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
@@ -318,7 +318,7 @@ button {
 }
 
 div#mosaic:hover img { opacity: 0.3; }
-div#mosaic:hover img:hover { opacity: 1; } 
+div#mosaic:hover img:hover { opacity: 1; }
 
 @media (max-width: 1200px) {
   #mosaic {

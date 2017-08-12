@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Weekend Artists</title> <!-- Will change this name-->
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="public/css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
@@ -18,15 +18,6 @@
 				</div>
 				<ul class="desktop-header-nav">
 				</ul>
-				<ul class="desktop-header-nav-right">
-					<li>
-						<a href="create_event.html">Explore</a>
-					</li>
-          <li>
-						<a href="create_event.html">Search</a>
-					</li>
-				</ul>
-
 			</div>
 		</div>
 		<!-- The Drop down menu, that will appear on smaller screens: -->
@@ -45,23 +36,27 @@
 					</a>
 				</div>
 			</div>
-			<div class>
-				<ul id = "menuItems" class = "mobile-menu-content">
-					<li>
-						<a href="about.html">Explore</a>
-					</li>
-					<li>
-						<a href="news.html">Search</a>
-					</li>
-				</ul>
-			</div>
 		</div>
+    <div class ="description-content">
+      <div class = "left-pane">
+        <div class="image">
+        </div>
+        <div class="color-grid">
+          <div class = "color-1"></div>
+          <div class = "color-2"></div>
+          <div class = "color-3"></div>
+          <div class = "color-4"></div>
+          <div class = "color-5"></div>
+        </div>
+      </div>
+      <div class="right-pane">
+        <div class ="image-description">
+        </div>
+        <div class="similar-images">
+        </div>
+      </div>
+    </div>
 	</header>
-	<div id="mosaic">
-  <% for (img in image) { %>
-       <img src="<%= image[img]%>">
-  <% }%>
-	</div>
 
 
 
