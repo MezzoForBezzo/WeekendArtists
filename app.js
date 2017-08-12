@@ -15,14 +15,21 @@ function getExampleImage(){
   var id = "36680895";
   var digitalNZUrl = "http://api.digitalnz.org/" +databaseVersion +"/records/" +id +"?api_key=" +digitalNZKey;
   return request({url: digitalNZUrl, json: true}).then(data => {
-    var image = data.record.large_thumbnail_url;
-    console.log(image);
+    var imageUrl = data.record.large_thumbnail_url;
+    var title = data.record.title;
+    console.log(imageUrl);
+    results = [imageUrl, title];
+    return results;
   });
 };
 
 app.get('/', function (req, res) {
-  getExampleImage().then(res.render("index.html.ejs"));
+  getExampleImage().then(image => {
+    var variables = {image};
+    res.render("index.html.ejs", variables);
+  });
 });
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
