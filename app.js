@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request-promise-native');
+var jsonQuery = require('json-query')
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
@@ -18,8 +19,11 @@ function testColorPicker(){
       // console.log('Status:', response.statusCode);
       // console.log('Headers:', JSON.stringify(response.headers));
       // console.log('Response:', body);
-      var imageColor1 = response.results.info;
-      console.log(imageColor1);
+      var colors = response.body;
+      jsonQuery('html_code', {
+          colors:colors
+      })
+      console.log(colors);
   }).auth(apiKey, apiSecret, true);
 };
 
