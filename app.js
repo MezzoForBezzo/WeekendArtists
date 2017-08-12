@@ -32,6 +32,10 @@ function testColorPicker() {
     return colors;
 };
 
+function getRandomImages(){
+  // DO STUFF
+  var digitalNZUrl = "http://api.digitalnz.org/v3/records.json?api_key=" + digitalNZKey + "&text=ocean&per_page=100&category=images";
+  return request({url: digitalNZUrl, json: true}).then(data => {
 
 function getExampleImage() {
     // DO STUFF

@@ -4,7 +4,7 @@ html {
   overflow-y: scroll; }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Archivo', sans-serif;
   background-color: white;
   height: 100%;
   margin: 0; }
@@ -35,11 +35,11 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 15px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding: 10px 15px;
   color: white; }
 
 .mobile-menu-hamburger button {
@@ -54,7 +54,6 @@ header {
   text-decoration: none;
   color: white;
   font-size: 30px;
-  padding-right: 40px;
   font-weight: bold; }
 
 .mobile-menu-hamburger span {
@@ -72,7 +71,7 @@ header {
   display: none;
   position: absolute;
   margin-left: -40px;
-  background-color: black;
+  background-color: #38393a;
   border-color: black;
   width: 100%;
   overflow: auto;
@@ -151,7 +150,7 @@ header {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 40px;
   margin-right: 20px; }
 
 .desktop-header-logo a {
@@ -188,7 +187,8 @@ header {
   margin: auto; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
 
 button {
   outline: none; }
@@ -208,53 +208,58 @@ button {
 .buttons {
   text-decoration: none; }
 
-#mosaic {
-  /* Prevent vertical gaps */
-  line-height: 0;
-  -webkit-column-count: 5;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 5;
-  -moz-column-gap: 0px;
-  column-count: 5;
-  column-gap: 0px; }
+.description-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
-div#mosaic img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-  -webkit-transition: .8s opacity;
-  -o-transition: .8s opacity;
-  transition: .8s opacity; }
+@media only screen and (max-width: 420px) {
+  .description-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
-div#mosaic:hover img {
-  opacity: 0.3; }
+.left-pane {
+  height: 100%;
+  width: 50%; }
 
-div#mosaic:hover img:hover {
-  opacity: 1; }
+@media only screen and (max-width: 420px) {
+  .left-pane {
+    height: 60%;
+    width: 100%; } }
 
-@media (max-width: 1200px) {
-  #mosaic {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4; } }
+.right-pane {
+  height: 100%;
+  width: 50%; }
 
-@media (max-width: 1000px) {
-  #mosaic {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3; } }
+@media only screen and (max-width: 420px) {
+  .right-pane {
+    height: 40%;
+    width: 100%; } }
 
-@media (max-width: 800px) {
-  #mosaic {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2; } }
+.full-image {
+  height: 60%; }
 
-@media (max-width: 400px) {
-  #mosaic {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1; } }
+@media only screen and (max-width: 420px) {
+  .full-image {
+    height: 80%; } }
+
+.color-grid {
+  height: 40%; }
+
+@media only screen and (max-width: 420px) {
+  .color-grid {
+    height: 20%; } }
+
+.image-description {
+  height: 60%; }
+
+.similar-images {
+  height: 40%; }
 
 .arrow-left {
   color: white;
@@ -270,14 +275,10 @@ div#mosaic:hover img:hover {
 
 .info-icon {
   padding-left: 15px;
-  width: 30px;
-  height: 30px; }
+  height: 25px; }
 
 .app-name {
   padding-left: 100px;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px; }
-
-.logo-icon {
-  height: 40px; }
