@@ -17,14 +17,33 @@ function getExampleImage(){
   return request({url: digitalNZUrl, json: true}).then(data => {
     var imageUrl = data.record.large_thumbnail_url;
     var title = data.record.title;
+    var desc = data.record.description;
     console.log(imageUrl);
-    results = [imageUrl, title];
+    results = [imageUrl, title, desc];
     return results;
   });
 };
 
+function getRandomImages(){
+  // DO STUFF
+  var digitalNZUrl = "http://api.digitalnz.org/v3/records.json?api_key=" + digitalNZKey + "&text=cat+dog";
+  return request({url: digitalNZUrl, json: true}).then(data => {
+
+    var rndImages = [];
+
+    (data.search["results"].forEach((img) => rndImages.push(img.large_thumbnail_url)));
+    debugger;
+    //var imageUrl = data.record.large_thumbnail_url;
+    //var title = data.record.title;
+    //var desc = data.record.description;
+
+    // results = [imageUrl, title, desc];
+    return rndImages;
+  });
+};
+
 app.get('/', function (req, res) {
-  getExampleImage().then(image => {
+  getRandomImages().then(image => {
     var variables = {image};
     res.render("index.html.ejs", variables);
   });

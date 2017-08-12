@@ -15,7 +15,8 @@
 
 <body>
   <h2> Henlo </h2>
-  <h3><%= image[1] %></h3>
-  <img src="<%= image[0] %>" />
+  <% for (img in image) { %>
+    <img src="<%= image[img] %>" />
+  <% }%>
 </body>
 </html>
