@@ -57,22 +57,17 @@
 			</div>
 		</div>
 	</header>
-	<div class="grid">
-  <div class="grid-sizer"></div>
-
+	<div id="mosaic">
   <% for (img in image) { %>
-  	 <div class="grid-item">
        <img src="<%= image[img]%>">
-     </div>
-  <% }%>
 
-</div>
+  <% }%>
+	</div>
+
 
 
 
 <script src="js/jquery-3.2.1.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<!-- <script src="js/imagesloaded.pkgd.min.js"> -->
 <script src="js/index.js"></script>
 
 </body>
