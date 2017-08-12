@@ -53,7 +53,6 @@ function getRandomImages(){
   return request({url: digitalNZUrl, json: true}).then(data => {
 
     var rndImages = [];
-
     (data.search["results"].forEach((img) => rndImages.push(img.large_thumbnail_url)));
     debugger;
     //var imageUrl = data.record.large_thumbnail_url;
@@ -76,9 +75,11 @@ app.get('/test', function(req,res){
     testColorPicker();
 });
 
-app.get('/view', function(req,res){
+app.get('/description', function(req,res){
     console.log(req.query.id);
     var id = req.query.id;
+    var variables = {id}
+    res.render("description.html.ejs", variables);
 });
 
 app.listen(3000, function () {
