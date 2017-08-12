@@ -8,6 +8,20 @@ app.set("view engine", "ejs")
 var digitalNZKey = "dHe4fP3p2HMw4jm92snZ";
 var databaseVersion = "v3";
 
+function testColorPicker(){
+  var request = require('request'),
+      apiKey = 'acc_f8948e118b862e4',
+      apiSecret = '768f05ab9814e9bc93a28a4cd2cbb179',
+      imageUrl = 'https://imagga.com/static/images/tagging/wind-farm-538576_640.jpg';
+
+  request.get('https://api.imagga.com/v1/colors?url='+encodeURIComponent(imageUrl), function (error, response, body) {
+      // console.log('Status:', response.statusCode);
+      // console.log('Headers:', JSON.stringify(response.headers));
+      // console.log('Response:', body);
+      var imageColor1 = response.results.info;
+      console.log(imageColor1);
+  }).auth(apiKey, apiSecret, true);
+};
 
 
 function getExampleImage(){
@@ -47,6 +61,10 @@ app.get('/', function (req, res) {
     var variables = {image};
     res.render("index.html.ejs", variables);
   });
+});
+
+app.get('/test', function(req,res){
+  testColorPicker();
 });
 
 app.listen(3000, function () {
