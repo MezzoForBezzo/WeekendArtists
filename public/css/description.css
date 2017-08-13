@@ -340,6 +340,10 @@ button {
     height: 25px; } }
 
 
+@media only screen and (max-width: 420px) {
+  .input {
+    height: 20px; } }
+
 .random-icon {
   height: 35px; }
 
