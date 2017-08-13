@@ -73,8 +73,10 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/test', function (req, res) {
-    testColorPicker();
+app.get('/random', function (req, res) {
+    var words = ["kiwi", "pohutakawa", "wellington", "tui", "kea", "tuatara", "Taranaki", "New Zealand", "Maori", "llama"]
+    var rand = words[Math.floor(Math.random() * words.length)];
+    res.redirect('/?q=' + rand);
 });
 
 app.get('/description', function (req, res) {
