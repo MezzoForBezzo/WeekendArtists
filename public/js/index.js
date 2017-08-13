@@ -8,3 +8,8 @@ $(function () {
 function showSearch(){
 	$('#overlay').toggle();
 }
+
+function doSearch(event){
+	this.event.preventDefault();
+	window.location.href = `/?q=${$('#search').val()}`;
+}

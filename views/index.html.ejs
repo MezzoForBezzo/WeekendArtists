@@ -30,7 +30,7 @@
 
 					</li>
 					<li>
-						<a onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
+						<a id="search-bar" onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
 					</li>
 				</ul>
 
@@ -60,9 +60,9 @@
 	</header>
 	<div id="overlay">
 		<div ondblclick="$('#overlay').hide();" class="overlay-test">
-			<form>
-			<input type="text" placeholder="sfdsfsds">
-		</form>
+			<form onsubmit="doSearch()">
+				<input id="search" type="text" placeholder="Search...">
+			</form>
 		</div>
 </div>
 	<div id="mosaic">
