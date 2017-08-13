@@ -64,11 +64,11 @@
 			<img src="<%= results[0]%>"/>
 		</div>
 		<div class="color-grid">
-			<div class = "color-1"></div>
-			<div class = "color-2"></div>
-			<div class = "color-3"></div>
-			<div class = "color-4"></div>
-			<div class = "color-5"></div>
+			<div id = "color-1"><%= results[3][0]%></div>
+			<div id = "color-2"><%= results[3][1]%></div>
+			<div id = "color-3"><%= results[3][2]%></div>
+			<div id = "color-4"><%= results[3][3]%></div>
+			<div id = "color-5"><%= results[3][4]%></div>
 		</div>
 	</div>
 	<div class="right-pane">
@@ -94,4 +94,11 @@
     function goBack() {
         window.history.back();
     }
+    <!--$("#color-1").css("color", <%= results[3][0]%>);-->
+    document.getElementById("color-1").style.backgroundColor = "<%= results[3][0]%>";
+    document.getElementById("color-2").style.backgroundColor = "<%= results[3][1]%>";
+    document.getElementById("color-3").style.backgroundColor = "<%= results[3][2]%>";
+    document.getElementById("color-4").style.backgroundColor = "<%= results[3][3]%>";
+    document.getElementById("color-5").style.backgroundColor = "<%= results[3][4]%>";
+
 </script>
