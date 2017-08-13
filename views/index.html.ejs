@@ -29,7 +29,7 @@
 						<a href="#"><img class = "random-icon" src="icons/shuffle.png"></a>
 					</li>
 					<li>
-						<a href="#"><img class="search-icon" src="icons/search.png"></a>
+						<a onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
 					</li>
 				</ul>
 
@@ -57,6 +57,13 @@
 			</ul>
 		</div>
 	</header>
+	<div id="overlay">
+		<div ondblclick="$('#overlay').hide();" class="overlay-test">
+			<form>
+			<input type="text" placeholder="sfdsfsds">
+		</form>
+		</div>
+</div>
 	<div id="mosaic">
   <% for (img in image) { %>
 		<a href="description?id=<%=image[img].id%>"><img src="<%= image[img].large_thumbnail_url%>"></a>

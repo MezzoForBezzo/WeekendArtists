@@ -10,7 +10,8 @@ body {
   margin: 0; }
 
 header {
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
 
 .mobile-menu {
   display: none;
@@ -313,3 +314,37 @@ div#mosaic:hover img:hover {
 @media only screen and (max-width: 420px) {
   .logo-icon {
     height: 25px; } }
+
+#overlay {
+  display: none; }
+
+.overlay-test {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .overlay-test input {
+    background: transparent;
+    border: none;
+    font-size: 5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    outline: none; }
+    .overlay-test input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.8); }
+    .overlay-test input::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.8); }

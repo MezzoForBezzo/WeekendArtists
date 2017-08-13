@@ -20,6 +20,7 @@ body {
 
 header{
 	text-align: center;
+  z-index: 1;
 }
 
 .mobile-menu {
@@ -312,5 +313,40 @@ div#mosaic:hover img:hover { opacity: 1; }
   height: 35px;
   @media#{$smaller-screens} {
     height: 25px;
+  }
+}
+
+#overlay{
+  display: none;
+}
+
+.overlay-test{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  input{
+    background: rgba(0, 0,0,0);
+    border: none;
+    font-size: 5rem;
+    text-align: center;
+    // color: rgba(255, 255,255,0.8);
+    color: rgba(255, 255,255,0.8);
+    //margin: auto;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255,255,0.8);
+    }
+
+    &::-moz-placeholder {
+      color: rgba(255, 255,255,0.8);
+    }
   }
 }
