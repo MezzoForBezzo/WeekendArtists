@@ -20,6 +20,9 @@ body {
 
 header{
 	text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .mobile-menu {
@@ -250,21 +253,56 @@ button {
 }
 
 .full-image{
-  height: 60%;
+  height: 50%;
+  //margin:
+  text-align: center;
   @media#{$smaller-screens} {
     height: 80%;
 	}
+
+  img{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+    max-width: 90%;
+    max-height: 90%;
+  }
 }
 
 .color-grid{
-  height: 40%;
+  height: 50%;
+  display: flex;
+  margin: 0 5%;
   @media#{$smaller-screens} {
     height: 20%;
 	}
 }
 
+#color-1{
+  width: 20%;
+  height: 50%;
+}
+#color-2{
+  width: 20%;
+  height: 50%;
+}
+#color-3{
+  width: 20%;
+  height: 50%;
+}
+#color-4{
+  width: 20%;
+  height: 50%;
+}
+#color-5{
+  width: 20%;
+  height: 50%;
+}
+
 .image-description{
   height: 60%;
+  @media#{$smaller-screens} {
+    margin-top: 70px;
+  }
+
 }
 
 .similar-images{
@@ -312,4 +350,22 @@ button {
   @media#{$smaller-screens} {
     height: 25px;
   }
+}
+
+#palette-title{
+  text-align: center;
+  font-weight: bold;
+}
+
+#divider-1{
+  height: 2px;
+  background-color: #d3d3d3;
+  width: 80%;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.filler{
+  width: 100%;
+  height: 100px;
 }

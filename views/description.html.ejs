@@ -18,12 +18,6 @@
 				</a>
 			</div>
 			<ul class="desktop-header-nav">
-				<li class="app-name">
-					Artchive New Zealand
-				</li>
-				<li>
-					<img class="info-icon" src="icons/info.png">
-				</li>
 			</ul>
 			<ul class="desktop-header-nav-right">
 				<li>
@@ -46,9 +40,6 @@
 		</div>
 		<ul class="mobile-menu-right">
 			<li>
-				<img class="info-icon" src="icons/info.png">
-			</li>
-			<li>
 				<a href="#"><img class = "random-icon" src="icons/shuffle.png"></a>
 			</li>
 			<li>
@@ -57,11 +48,18 @@
 		</ul>
 	</div>
 </header>
-
+<div class="filler">
+</div>
 <div class ="description-content">
 	<div class = "left-pane">
+
 		<div class="full-image">
 			<img src="<%= results[0]%>"/>
+		</div>
+		<div>
+			<h2 id="palette-title">Colour Palette</h2>
+		</div>
+		<div id ="divider-1">
 		</div>
 		<div class="color-grid">
 			<div id = "color-1"><%= results[3][0]%></div>
