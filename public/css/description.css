@@ -16,7 +16,8 @@ header {
   display: none;
   width: 100%;
   -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: black; }
 
 @media only screen and (max-width: 420px) {
   .mobile-menu {
@@ -39,8 +40,8 @@ header {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 10px 15px;
-  color: white; }
+  color: white;
+  margin: auto; }
 
 .mobile-menu-hamburger button {
   width: 45px;
@@ -50,11 +51,31 @@ header {
   font-size: 18px;
   border: none; }
 
+.mobile-menu-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  padding-left: 0;
+  padding-right: 14px; }
+
+.mobile-menu-right li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  padding: 0 10px; }
+
 .mobile-menu-logo a {
   text-decoration: none;
   color: white;
   font-size: 30px;
-  font-weight: bold; }
+  padding-right: 40px;
+  padding-left: 20px;
+  font-weight: bold;
+  margin: auto; }
 
 .mobile-menu-hamburger span {
   display: block;
@@ -71,7 +92,7 @@ header {
   display: none;
   position: absolute;
   margin-left: -40px;
-  background-color: #38393a;
+  background-color: black;
   border-color: black;
   width: 100%;
   overflow: auto;
@@ -119,7 +140,7 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px 25px;
+  padding: 0px 25px;
   width: 100%; }
 
 .desktop-header-nav li {
@@ -266,19 +287,37 @@ button {
   padding: 3px; }
 
 .random-icon {
-  width: 35px;
-  height: 40px; }
+  height: 35px; }
+
+@media only screen and (max-width: 420px) {
+  .random-icon {
+    height: 25px; } }
 
 .search-icon {
-  width: 40px;
-  height: 40px; }
+  height: 35px; }
+
+@media only screen and (max-width: 420px) {
+  .search-icon {
+    height: 25px; } }
 
 .info-icon {
   padding-left: 15px;
-  height: 25px; }
+  height: 30px; }
+
+@media only screen and (max-width: 420px) {
+  .info-icon {
+    padding: 0;
+    height: 25px; } }
 
 .app-name {
   padding-left: 100px;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px; }
+
+.logo-icon {
+  height: 40px; }
+
+@media only screen and (max-width: 420px) {
+  .logo-icon {
+    height: 25px; } }
