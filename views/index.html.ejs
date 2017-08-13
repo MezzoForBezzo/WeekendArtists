@@ -12,7 +12,7 @@
 		<div class="desktop-header">
 			<div class="desktop-header-inner">
 				<div class="desktop-header-logo">
-					<a href="#">
+					<a href="/">
 						<img class = "logo-icon" src="icons/logo.png">
 					</a>
 				</div>
@@ -24,7 +24,7 @@
 
 					</li>
 					<li>
-						<a onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
+						<a id="search-bar" onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
 					</li>
 				</ul>
 
@@ -44,18 +44,18 @@
 					<a href="#"><img class = "random-icon" src="icons/shuffle.png"></a>
 				</li>
 				<li>
-					<a href="#"><img class="search-icon" src="icons/search.png"></a>
+					<a onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
 				</li>
 			</ul>
 		</div>
 	</header>
 	<div id="overlay">
 		<div ondblclick="$('#overlay').hide();" class="overlay-test">
-			<form>
-			<input type="text" placeholder="sfdsfsds">
-		</form>
+			<form onsubmit="doSearch()">
+				<input id="search" type="text" placeholder="Search...">
+			</form>
 		</div>
-</div>
+	</div>
 	<div id="mosaic">
   <% for (img in image) { %>
 		<a href="description?id=<%=image[img].id%>"><img src="<%= image[img].large_thumbnail_url%>"></a>
