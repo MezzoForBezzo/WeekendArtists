@@ -5,6 +5,8 @@ A mobile reponsive web app that discovers New Zealand art and the colour palette
 
 It was created over a weekend as part of the SOT Hackfest 2017 by a enthusiastic team made of four developers and a designer.
 
+Artchive NZ ended up winning first place.
+
 ## Credits
 
 ### Front-end
