@@ -54,7 +54,7 @@ function getExampleImage() {
 function getRandomImages(q = "kiwi") {
     // DO STUFF
 
-    var digitalNZUrl = "http://api.digitalnz.org/v3/records.json?api_key=" + digitalNZKey + "&text=" + q + "&per_page=100&category=images";
+    var digitalNZUrl = "http://api.digitalnz.org/v3/records.json?api_key=" + digitalNZKey + "&text=Art+" + q + "&per_page=100&category=images";
     return request({url: digitalNZUrl, json: true}).then(data => {
         var rndImages = [];
         resultsData = data.search["results"];
@@ -74,7 +74,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/random', function (req, res) {
-    var words = ["kiwi", "pohutakawa", "wellington", "tui", "kea", "tuatara", "Taranaki", "New Zealand", "Maori", "llama"]
+    var words = ["kiwi", "pohutakawa", "wellington", "tui", "kea",
+        "tuatara", "Taranaki", "New Zealand", "Maori", "llama", "Bill English", "Car", "Aotearoa"]
     var rand = words[Math.floor(Math.random() * words.length)];
     res.redirect('/?q=' + rand);
 });
