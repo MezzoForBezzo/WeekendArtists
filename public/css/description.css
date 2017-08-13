@@ -290,6 +290,11 @@ button {
   .color-grid {
     height: 20%; } }
 
+@media only screen and (max-width: 420px) {
+  .heading {
+    margin-top: 70px;
+    margin-left: 20px;} }
+
 #color-1 {
   width: 20%;
   height: 50%; }
@@ -315,7 +320,9 @@ button {
 
 @media only screen and (max-width: 420px) {
   .image-description {
-    margin-top: 70px; } }
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-right: 20px;} }
 
 .similar-images {
   height: 40%; }
@@ -323,6 +330,15 @@ button {
 .arrow-left {
   color: white;
   padding: 3px; }
+
+.back-icon{
+  height: 35px;
+  margin-top: 10px;}
+
+@media only screen and (max-width: 420px) {
+  .back-icon {
+    height: 25px; } }
+
 
 .random-icon {
   height: 35px; }

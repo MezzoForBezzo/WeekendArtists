@@ -14,7 +14,7 @@
 		<div class="desktop-header-inner">
 			<div class="desktop-header-logo">
 				<a onclick="goBack()">
-					<
+					<img class = "back-icon" src="icons/arrow.png"></a>
 				</a>
 			</div>
 			<ul class="desktop-header-nav">
@@ -34,7 +34,7 @@
 		<div class = "mobile-menu-inner">
 			<div class="mobile-menu-logo">
 				<a href="/">
-					<
+					<img class = "back-icon" src="icons/arrow.png"></a>
 				</a>
 			</div>
 		</div>
@@ -62,14 +62,17 @@
 		<div id ="divider-1">
 		</div>
 		<div class="color-grid">
-			<div id = "color-1"><%= results[3][0]%></div>
-			<div id = "color-2"><%= results[3][1]%></div>
-			<div id = "color-3"><%= results[3][2]%></div>
-			<div id = "color-4"><%= results[3][3]%></div>
-			<div id = "color-5"><%= results[3][4]%></div>
+			<div id = "color-1" title="<%= results[3][0]%>"></div>
+			<div id = "color-2" title="<%= results[3][1]%>"></div>
+			<div id = "color-3" title="<%= results[3][2]%>"></div>
+			<div id = "color-4" title="<%= results[3][3]%>"></div>
+			<div id = "color-5" title="<%= results[3][4]%>"></div>
 		</div>
 	</div>
 	<div class="right-pane">
+		<div class="heading">
+			<h2><%= results[1]%></h2>
+		</div>
 		<div class ="image-description">
 			<%= results[2]%>
 		</div>
