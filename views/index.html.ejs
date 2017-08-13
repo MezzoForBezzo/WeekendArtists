@@ -3,7 +3,7 @@
 <head>
 	<title>Weekend Artists</title> <!-- Will change this name-->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
@@ -18,7 +18,7 @@
 				</div>
 				<ul class="desktop-header-nav">
 					<li class="app-name">
-							Artchive NZ
+							Artchive New Zealand
 					</li>
 					<li>
 						<img class="info-icon" src="icons/info.png">
@@ -26,10 +26,11 @@
 				</ul>
 				<ul class="desktop-header-nav-right">
 					<li>
-						<a href="/random"><img class = "random-icon" src="icons/dice.png"></a>
+						<a href="/random"><img class = "random-icon" src="icons/shuffle.png"></a>
+
 					</li>
 					<li>
-						<a href="#"><img class="search-icon" src="icons/search.png"></a>
+						<a onclick="showSearch()" href="#"><img class="search-icon" src="icons/search.png"></a>
 					</li>
 				</ul>
 
@@ -40,22 +41,30 @@
 			<div class = "mobile-menu-inner">
 				<div class="mobile-menu-logo">
 					<a href="#">
-					W
+						<img class="logo-icon" src="icons/logo.png">
 					</a>
 				</div>
 			</div>
-			<div class>
-				<ul id = "menuItems" class = "mobile-menu-content">
-					<li>
-						<a href="about.html">Explore</a>
-					</li>
-					<li>
-						<a href="news.html">Search</a>
-					</li>
-				</ul>
-			</div>
+			<ul class="mobile-menu-right">
+				<li>
+					<img class="info-icon" src="icons/info.png">
+				</li>
+				<li>
+					<a href="#"><img class = "random-icon" src="icons/shuffle.png"></a>
+				</li>
+				<li>
+					<a href="#"><img class="search-icon" src="icons/search.png"></a>
+				</li>
+			</ul>
 		</div>
 	</header>
+	<div id="overlay">
+		<div ondblclick="$('#overlay').hide();" class="overlay-test">
+			<form>
+			<input type="text" placeholder="sfdsfsds">
+		</form>
+		</div>
+</div>
 	<div id="mosaic">
   <% for (img in image) { %>
 		<a href="description?id=<%=image[img].id%>"><img src="<%= image[img].large_thumbnail_url%>"></a>

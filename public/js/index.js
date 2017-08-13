@@ -4,3 +4,7 @@ $(function () {
 		$('#menuItems')[0].classList.toggle("show");
 	});
 });
+
+function showSearch(){
+	$('#overlay').toggle();
+}
