@@ -7,6 +7,8 @@ It was created over a weekend as part of the SOT Hackfest 2017 by a enthusiastic
 
 Artchive NZ ended up winning first place.
 
+Front-end and Back-end were peer programmed using an Agile method called XP(Extreme Programming).
+
 ## Credits
 
 ### Front-end
